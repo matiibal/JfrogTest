@@ -1,0 +1,29 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Jfrog CI
+
+# Controls when the workflow will run
+on:
+  push:
+    branches:
+      - main # lub inna główna gałąź
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Upload to JFrog
+      run: |
+        # Tutaj dodaj kod lub polecenia do przesyłania plików do JFroga
+        # Przykład użycia JFrog CLI:
+        curl -fL https://getcli.jfrog.io | sh
+        chmod +x jfrog
+        ./jfrog rt config --url  https://matiibal.jfrog.io/artifactory/TEST1/ --user mbal --password Qazwsx123 --interactive=false
+        ./jfrog rt upload ./artefakty JfrogTest/
