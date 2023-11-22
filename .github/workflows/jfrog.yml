@@ -25,5 +25,5 @@ jobs:
         # Przykład użycia JFrog CLI:
         curl -fL https://getcli.jfrog.io | sh
         chmod +x jfrog
-        ./jfrog rt config --url=https://matiibal.jfrog.io/artifactory/TEST1/ --user=mbal --password=Qazwsx123 --interactive=false
+        ./jfrog rt config --url=https://matiibal.jfrog.io/artifactory/TEST1/ --user=mbal --password=Qazwsx123
         ./jfrog rt upload ./artefakty JfrogTest/
