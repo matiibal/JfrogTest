@@ -31,4 +31,4 @@ jobs:
         # Przykładowe polecenie do wysłania plików do Artifactory
         jfrog rt u --url="https://matiibal.jfrog.io/artifactory/TEST1/" --user="mbal" --password="Qazwsx123" \
           --build-name="$GITHUB_REPOSITORY" --build-number="$GITHUB_RUN_NUMBER" \
-          ./artefakty artifactoryGit/
+          ./artefakty/ artifactoryGit/
